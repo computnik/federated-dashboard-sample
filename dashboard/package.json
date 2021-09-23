@@ -1,0 +1,33 @@
+{
+  "name": "@shared-routing/dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "7.14.3",
+    "@babel/preset-react": "7.13.13",
+    "babel-loader": "8.2.2",
+    "find-up": "5.0.0",
+    "html-webpack-plugin": "5.3.1",
+    "serve": "11.3.2",
+    "webpack": "5.37.1",
+    "webpack-cli": "4.7.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "scripts": {
+    "start": "webpack-cli serve",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 3001",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "events": "^3.3.0",
+    "history": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "6.0.0-beta.0",
+    "react-router-dom": "6.0.0-beta.0",
+    "recharts": "2.0.9"
+  }
+}
