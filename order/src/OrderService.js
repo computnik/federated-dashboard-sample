@@ -1,18 +1,17 @@
 import {
   Container,
   Grid,
-  makeStyles,
-  Table,
+  makeStyles, Paper, Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
-  Typography,
-  Paper,
+  Typography
 } from "@material-ui/core";
 import React from "react";
-import { orders } from "./data";
 import { useServiceContext } from "shell/Service";
+import { TransactionsChart } from "./Chart";
+import { orders } from "./data";
 
 function preventDefault(event) {
   event.preventDefault();
@@ -94,6 +93,17 @@ export default function OrderService() {
                 ))}
               </TableBody>
             </Table>
+          </Paper>
+          <Paper>
+          <Typography
+              component="h1"
+              variant="h6"
+              color="primary"
+              gutterBottom
+            >
+              Chart
+            </Typography>
+            <TransactionsChart />
           </Paper>
         </Grid>
       </Container>

@@ -52,6 +52,7 @@ module.exports = {
       exposes: {
         "./RecentOrdersWidget": "./src/RecentOrdersWidget",
         "./OrderService": "./src/OrderService",
+        "./Chart": "./src/Chart"
       },
       shared: [
         {

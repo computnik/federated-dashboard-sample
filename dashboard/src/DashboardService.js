@@ -1,11 +1,12 @@
 import { Container, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
-import Widget from "./Widget";
 import { useServiceContext } from "shell/Service";
+import Widget from "./Widget";
 
 const RecentOrders = React.lazy(() => import("order/RecentOrdersWidget"));
 const SalesDeposits = React.lazy(() => import("sales/DepositsWidget"));
 const SalesToday = React.lazy(() => import("sales/TodayWidget"));
+const OrderChart = React.lazy(() => import("order/Chart"))
 
 const RecentOrderWidget = () => (
   <Widget height="500px">
@@ -22,6 +23,12 @@ const SalesDepositsWidget = () => (
 const SalesTodayWidget = () => (
   <Widget height="240px">
     <SalesToday />
+  </Widget>
+);
+
+const OrderChartWidget = () => (
+  <Widget height="240px">
+    <OrderChart />
   </Widget>
 );
 
@@ -63,6 +70,9 @@ export default function Dashboard() {
           </Grid>
           <Grid item xs={12}>
             <RecentOrderWidget />
+          </Grid>
+          <Grid item xs={12}>
+            <OrderChartWidget />
           </Grid>
         </Grid>
       </Container>

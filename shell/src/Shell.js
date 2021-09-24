@@ -1,11 +1,11 @@
-import React from "react";
 import { Box } from "@material-ui/core";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import AppDrawer from "./AppDrawer";
+import React from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AppBar from "./AppBar";
-import Viewport from "./Viewport";
-import { useLocalStorageSync } from "./useLocalStorageSync";
+import AppDrawer from "./AppDrawer";
 import { ServiceProvider } from "./Service";
+import { useLocalStorageSync } from "./useLocalStorageSync";
+import Viewport from "./Viewport";
 
 const DashboardService = React.lazy(() => import("dashboard/DashboardService"));
 const OrderService = React.lazy(() => import("order/OrderService"));
